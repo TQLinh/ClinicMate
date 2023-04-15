@@ -1,20 +1,15 @@
 import React from "react";
 import LayoutSign from "../layout/LayoutSign";
-import logo from "../Images/Clinicmate 1.png";
 import Input from "../components/input/Input";
 import Button from "../components/button/Button";
 import { Link } from "react-router-dom";
+import Logo from "../components/Logo/Logo";
 const LoginPage = () => {
   return (
     <LayoutSign header="Login" childrenStyle="!max-w-[500px]">
       <div className="bg-white p-[40px_42px]">
         <div className="flex flex-col items-center justify-center">
-          <div className="w-[68px] h-[68px]">
-            <img src={logo} alt="" />
-          </div>
-          <span className="text-[14px] text-[#fff0] font-medium bg-clip-text w-max bg-gradient-to-tr from-gradientLeft to-gradientRight">
-            ClinicMate
-          </span>
+          <Logo></Logo>
           <span className="text-[9px] text-gray2">Clinic Management</span>
         </div>
         <form autoComplete="off" className="mt-9">

@@ -14,7 +14,7 @@ module.exports = {
       subhead: "#6C87AE",
       // black color
       black1: "#000000",
-      balck2: "#1D1D1D",
+      black2: "#1D1D1D",
       black3: "#282828",
       white: "#FFFFFF",
       //gray color
@@ -25,6 +25,7 @@ module.exports = {
 
       bgRegister: "#E2EDFF",
       textColor: "#437FF7",
+      textColor2: "#6C87AE",
     },
     extend: {},
   },

@@ -83,7 +83,7 @@ function NextStep() {
             setStep(step - 1);
           }
         }}
-        className="flex items-center text-white"
+        className="flex items-center text-white cursor-pointer"
       >
         <div className="flex items-center justify-center w-[42px] h-[42px]">
           <ArrowLeft />
@@ -99,7 +99,7 @@ function NextStep() {
             setStep(step + 1);
           }
         }}
-        className="flex items-center text-2xl bg-white p-[5px_52px] rounded-3xl text-[#6F3AFA]"
+        className="flex items-center cursor-pointer text-2xl bg-white p-[5px_52px] rounded-3xl text-[#6F3AFA]"
       >
         <span className="text-2xl font-semibold">
           {step === 2 ? "Register" : "Next"}

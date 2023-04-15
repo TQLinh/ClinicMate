@@ -3,9 +3,13 @@ import ReactDOM from "react-dom/client";
 import { ToastContainer } from "react-toastify";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
-import "./Styles/index.scss";
 import { StepProvider } from "./context/stepContext";
 import "react-toastify/dist/ReactToastify.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "react-datepicker/dist/react-datepicker.css";
+import "react-calendar/dist/Calendar.css";
+import "./Styles/index.scss";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>

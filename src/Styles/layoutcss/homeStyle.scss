@@ -1,0 +1,37 @@
+.home-nav {
+  & ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    & li a {
+      color: #6c87ae;
+      &.active {
+        color: rgb(6, 165, 228);
+      }
+    }
+  }
+}
+.home-slider {
+  .arrow {
+    &-next,
+    &-prev {
+      position: absolute;
+      z-index: 10;
+      top: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: translateY(-50%);
+      & i {
+        font-size: 2rem;
+        color: white;
+      }
+    }
+    &-next {
+      right: 1rem;
+    }
+    &-prev {
+      left: 1rem;
+    }
+  }
+}

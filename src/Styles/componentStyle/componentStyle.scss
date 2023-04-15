@@ -1,0 +1,81 @@
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  color: transparent;
+  display: inline-block;
+  white-space: nowrap;
+  background-image: linear-gradient(0, #3a8ef6, #6f3afa);
+}
+.react-datepicker {
+  &-wrapper {
+    padding: 1.7rem 2.3rem;
+    border: 1px solid #d8d7da;
+    border-radius: 1.6rem;
+    & input {
+      color: #939394;
+      font-size: 1.25rem;
+    }
+  }
+  &__day,
+  &__day-name {
+    width: 4rem;
+    display: inline-grid;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+  }
+  &__day-names {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.react-calendar {
+  width: 100%;
+  border: none;
+  & .react-calendar__month-view__weekdays {
+    color: #6c87ae;
+  }
+  & .react-calendar__navigation {
+    border: 0.1rem solid #6c87ae;
+    border-radius: 3rem;
+    height: 57px;
+  }
+  & .react-calendar__month-view__days {
+    gap: 1.1rem;
+  }
+  & .react-calendar__month-view__days__day {
+    border: 0.1rem solid #6c87ae;
+    border-radius: 0.8rem;
+    width: 5.5rem !important;
+    height: 5.5rem !important;
+    padding: 0 !important;
+    & abbr {
+      font-size: 1.6rem;
+      color: #6c87ae;
+    }
+    &.react-calendar__tile--active {
+      background: linear-gradient(180deg, #3a8ef6, #6f3afa);
+      & abbr {
+        font-size: 1.6rem;
+        color: white;
+      }
+    }
+  }
+}
+
+.my-node-enter {
+  opacity: 0;
+}
+.my-node-enter-active {
+  opacity: 1;
+  transition: opacity 200ms;
+}
+.my-node-exit {
+  opacity: 1;
+}
+.my-node-exit-active {
+  opacity: 0;
+  transition: opacity 200ms;
+}
