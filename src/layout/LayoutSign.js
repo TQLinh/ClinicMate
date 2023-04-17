@@ -6,9 +6,7 @@ const LayoutSign = ({ header, children, nextStep, childrenStyle }) => {
       <h2 className="font-semibold text-[32px] block text-center text-white">
         {header || "Chưa có tiêu đề!"}
       </h2>
-      <div
-        className={`bg-white rounded-3xl mt-[42px] w-full overflow-hidden ${childrenStyle}`}
-      >
+      <div className={` mt-[42px] w-full overflow-hidden ${childrenStyle}`}>
         {children}
       </div>
       {nextStep}

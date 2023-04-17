@@ -2,7 +2,7 @@ import React from "react";
 
 const RegisterStep2 = () => {
   return (
-    <div className="p-[40px_48px] ">
+    <div className="p-[40px_48px] text-textColor2">
       <p>
         In a clinical setting, patients can receive a wide range of healthcare
         services. Routine check-ups are important to monitor overall health and

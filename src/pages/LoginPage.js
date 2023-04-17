@@ -2,22 +2,35 @@ import React from "react";
 import LayoutSign from "../layout/LayoutSign";
 import Input from "../components/input/Input";
 import Button from "../components/button/Button";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Logo from "../components/Logo/Logo";
+import { useForm } from "react-hook-form";
 const LoginPage = () => {
+  const navigate = useNavigate();
+  const { control } = useForm();
   return (
-    <LayoutSign header="Login" childrenStyle="!max-w-[500px]">
+    <LayoutSign
+      header="Login"
+      childrenStyle="!max-w-[500px] rounded-3xl overflow-hidden"
+    >
       <div className="bg-white p-[40px_42px]">
         <div className="flex flex-col items-center justify-center">
           <Logo></Logo>
           <span className="text-[9px] text-gray2">Clinic Management</span>
         </div>
         <form autoComplete="off" className="mt-9">
-          <Input type="text" placeholder="Username or Email"></Input>
           <Input
+            type="text"
+            placeholder="Username or Email"
+            control={control}
+            name="email"
+          ></Input>
+          <Input
+            name="password"
             type="password"
             className="mt-8"
             placeholder="Username or Email"
+            control={control}
           ></Input>
           <div className="flex justify-between mt-[10px]">
             <div className="flex items-center gap-1 text-textColor">
@@ -33,7 +46,13 @@ const LoginPage = () => {
               </Link>
             </div>
           </div>
-          <Button className="mt-8" type="submit">
+          <Button
+            onClick={() => {
+              navigate("/");
+            }}
+            className="mt-8"
+            type="submit"
+          >
             Login
           </Button>
         </form>

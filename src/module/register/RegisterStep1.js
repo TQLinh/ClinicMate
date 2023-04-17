@@ -1,32 +1,57 @@
 import React, { useState } from "react";
 import Input from "../../components/input/Input";
-import ReactDatePicker from "react-datepicker";
+import DateTimePicker from "react-datetime-picker";
+// import { useForm } from "react-hook-form";
+// import { yupResolver } from "@hookform/resolvers/yup";
+// import * as yup from "yup";
 
-const RegisterStep1 = () => {
-  const [date, setDate] = useState(new Date());
+const RegisterStep1 = ({ control }) => {
+  const [value, onChange] = useState(new Date());
   return (
-    <form className="p-[56px_154px] gap-[76px] flex">
+    <div className="p-[9rem_154px] gap-[76px] flex">
       <div className="flex flex-col flex-1 gap-[32px]">
-        <Input placeholder="First Name *" type="text"></Input>
-        <Input placeholder="Last Name *" type="text"></Input>
-        <div>
-          <ReactDatePicker
-            onChange={(date) => setDate(date)}
-            selected={date}
-            dateFormat="dd/MM/yyyy"
-            required={true}
-            name="nsx"
+        <Input
+          placeholder="First Name *"
+          type="text"
+          control={control}
+          name="first"
+        ></Input>
+        <Input
+          placeholder="Last Name *"
+          type="text"
+          control={control}
+          name="last"
+        ></Input>
+        <div className="date_picker">
+          <DateTimePicker
+            clearIcon={null}
+            format="dd/MM/yyyy"
+            onChange={onChange}
+            value={value}
           />
         </div>
-        <Input placeholder="Mobile Phone *" type="text"></Input>
       </div>
       <div className="flex flex-col flex-1 gap-[32px]">
-        <Input placeholder="Your Email *" type="text"></Input>
-        <Input placeholder="Your Password *" type="text"></Input>
-        <Input placeholder="Social Security Number *" type="text"></Input>
-        <Input placeholder="Insurance Member *" type="text"></Input>
+        <Input
+          placeholder="Your Email or mobile phone *"
+          type="text"
+          control={control}
+          name="email"
+        ></Input>
+        <Input
+          placeholder="Your Password *"
+          type="text"
+          control={control}
+          name="password"
+        ></Input>
+        <Input
+          placeholder="Social Security Number *"
+          type="text"
+          control={control}
+          name="ocialsecurity"
+        ></Input>
       </div>
-    </form>
+    </div>
   );
 };
 

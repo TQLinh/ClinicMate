@@ -31,35 +31,51 @@
   }
 }
 
-.react-calendar {
+.react-datetime-picker {
   width: 100%;
-  border: none;
-  & .react-calendar__month-view__weekdays {
-    color: #6c87ae;
+  &__wrapper {
+    padding: 2rem 2.3rem;
+    border-radius: 1.6rem;
+    border: 0.1rem solid #d8d7da;
   }
-  & .react-calendar__navigation {
-    border: 0.1rem solid #6c87ae;
-    border-radius: 3rem;
-    height: 57px;
+  .react-datetime-picker__inputGroup {
+    color: #8d8b8b;
+    width: 100%;
+    font-weight: 500;
   }
-  & .react-calendar__month-view__days {
-    gap: 1.1rem;
-  }
-  & .react-calendar__month-view__days__day {
-    border: 0.1rem solid #6c87ae;
-    border-radius: 0.8rem;
-    width: 5.5rem !important;
-    height: 5.5rem !important;
-    padding: 0 !important;
-    & abbr {
-      font-size: 1.6rem;
+}
+
+.date_picker {
+  & > .react-calendar {
+    width: 100%;
+    border: none;
+    & .react-calendar__month-view__weekdays {
       color: #6c87ae;
     }
-    &.react-calendar__tile--active {
-      background: linear-gradient(180deg, #3a8ef6, #6f3afa);
+    & .react-calendar__navigation {
+      border: 0.1rem solid #6c87ae;
+      border-radius: 3rem;
+      height: 57px;
+    }
+    & .react-calendar__month-view__days {
+      gap: 1.1rem;
+    }
+    & .react-calendar__month-view__days__day {
+      border: 0.1rem solid #6c87ae;
+      border-radius: 0.8rem;
+      width: 5.5rem !important;
+      height: 5.5rem !important;
+      padding: 0 !important;
       & abbr {
         font-size: 1.6rem;
-        color: white;
+        color: #6c87ae;
+      }
+      &.react-calendar__tile--active {
+        background: linear-gradient(180deg, #3a8ef6, #6f3afa);
+        & abbr {
+          font-size: 1.6rem;
+          color: white;
+        }
       }
     }
   }
