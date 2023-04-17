@@ -1,11 +1,11 @@
 import React from "react";
-import HomeHeader from "../module/home/HomeHeader";
 import { Outlet } from "react-router-dom";
+import BookAppHeader from "../module/bookAppointment/BookAppHeader";
 
 const BookAppointmentPage = () => {
   return (
     <div className="bg-white">
-      <HomeHeader></HomeHeader>
+      <BookAppHeader></BookAppHeader>
       <div>
         <Outlet></Outlet>
       </div>
