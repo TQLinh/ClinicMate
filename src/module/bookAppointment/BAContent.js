@@ -19,6 +19,8 @@ import IconPolyclinicvl from "../../icon/IconPolyclinicvl";
 import IconDoctorvl from "../../icon/IconDoctorvl";
 import IconSysptomvl from "../../icon/IconSysptomvl";
 import IconSysptom from "../../icon/IconSysptom";
+import CreatePortalSysptom from "../../components/createPortal/CreatePortalSysptom";
+import CreatePortalDoctor from "../../components/createPortal/CreatePortalDoctor";
 
 const hoursList = [
   {
@@ -119,6 +121,8 @@ const BAContent = () => {
     setSelectedCheckbox(event.target.value);
   };
   const [show, setShow] = useState(false);
+  const [showSysptom, setShowSysptom] = useState(false);
+  const [showDoctor, setShowDoctor] = useState(false);
   return (
     <div className="max-w-[1156px] mx-auto mt-[8rem]">
       <CreatePortalSpecialty
@@ -127,6 +131,18 @@ const BAContent = () => {
         visible={show}
         handleClose={() => setShow(false)}
       ></CreatePortalSpecialty>
+      <CreatePortalSysptom
+        open={showSysptom}
+        onClose={() => setShowSysptom(false)}
+        visible={showSysptom}
+        handleClose={() => setShowSysptom(false)}
+      ></CreatePortalSysptom>
+      <CreatePortalDoctor
+        open={showDoctor}
+        onClose={() => setShowDoctor(false)}
+        visible={showDoctor}
+        handleClose={() => setShowDoctor(false)}
+      ></CreatePortalDoctor>
       <h3 className="text-[32px] font-semibold text-gradient">Appointment</h3>
       <div className="mt-[10rem]">
         <Header number={1}>Booking person information</Header>
@@ -219,6 +235,7 @@ const BAContent = () => {
           icon={<IconSysptom />}
           title="Sysptom"
           describe="Select a Sysptom"
+          onClick={() => setShowSysptom(true)}
         ></SelectCard>
         <SelectCard
           onClick={() => setShow(true)}
@@ -229,6 +246,7 @@ const BAContent = () => {
         ></SelectCard>
 
         <SelectCard
+          onClick={() => setShowDoctor(true)}
           styleIcon="text-[#2F80ED] bg-[#2F80ED]"
           icon={<IconDoctor />}
           title="Doctor"

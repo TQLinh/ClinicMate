@@ -3,7 +3,9 @@ import utilitiImg from "../../../Images/img2.png";
 import ButtonIcon from "../../../components/button/ButtonIcon";
 import IconCall from "../../../icon/IconCall";
 import IconHome from "../../../icon/IconHome";
+import { useNavigate } from "react-router-dom";
 const HomeUtilities = () => {
+  const navigate = useNavigate();
   return (
     <div className="flex justify-between items-center mt-[240px] pb-[143px]">
       <div className="w-[505px] ">
@@ -16,6 +18,9 @@ const HomeUtilities = () => {
           healthcare system for millions of people
         </p>
         <ButtonIcon
+          onClick={() => {
+            navigate("/register");
+          }}
           className="rounded-full w-max p-[16px_28px] mt-[32px]"
           iconLeft={<IconCall />}
         >

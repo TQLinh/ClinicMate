@@ -15,7 +15,7 @@ const list = [
   { id: 10, specialty: "test " },
   { id: 11, specialty: "test " },
 ];
-const CreatePortalSpecialty = ({ visible, onClose, handleClose }) => {
+const CreatePortalSysptom = ({ visible, onClose, handleClose }) => {
   return (
     <CSSTransition
       in={visible}
@@ -38,8 +38,8 @@ const CreatePortalSpecialty = ({ visible, onClose, handleClose }) => {
               <Popup
                 listData={list}
                 handleClose={onClose}
-                header="Specialty list"
-                describe="Select a Specialty"
+                header="Symptom list"
+                describe="Choose a symptom"
               ></Popup>
             </div>
           </div>,
@@ -50,4 +50,4 @@ const CreatePortalSpecialty = ({ visible, onClose, handleClose }) => {
   );
 };
 
-export default CreatePortalSpecialty;
+export default CreatePortalSysptom;
