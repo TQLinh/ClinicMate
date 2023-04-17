@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from "../../components/Logo/Logo";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import Button from "../../components/button/Button";
 import EnsignVN from "../../Images/vn.png";
 import EnsignAnh from "../../Images/anh.png";
@@ -27,6 +27,7 @@ const HomeNav = [
   },
 ];
 const HomeHeader = () => {
+  const navigate = useNavigate();
   return (
     <header className="max-w-[1156px] gap-[46px] mx-auto flex items-center pt-[45px]">
       <div>
@@ -51,7 +52,12 @@ const HomeHeader = () => {
           </ul>
         </nav>
         <div className="flex items-center gap-8">
-          <Button className="!p-[10px_40px] rounded-lg text-[18px]">
+          <Button
+            onClick={() => {
+              navigate("/login");
+            }}
+            className="!p-[10px_40px] rounded-lg text-[18px]"
+          >
             Login
           </Button>
           <div className="flex gap-2">
